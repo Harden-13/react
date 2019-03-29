@@ -33,11 +33,9 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                exclude: /node_modules/,
                 use: [
                     { loader: 'style-loader' },
-		    { loader: 'css-loader' },
-                    { loader: 'less-loader' }
+	            { loader: 'css-loader' }
                 ]
             },
             {
@@ -67,7 +65,7 @@ module.exports = {
         },
         proxy: {
             '/api': {
-                target: 'http://127.0.0.1:8080',
+                target: 'http://127.0.0.1:8000',
                 changeOrigin: true
             }
         }
