@@ -1,18 +1,4 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import AppState from './AppState';
-import App from './App';
+import React from 'react'
+import ReactDom from 'react-dom'
 
-const appState = new AppState();
-
-render(
-  <AppContainer>
-    <App appState={appState} />
-  </AppContainer>,
-  document.getElementById('root')
-);
-
-if (module.hot) {
-  module.hot.accept('./App', () => { render(App) })
-}
+ReactDom.render(<Router />,document.getElementById('root'))
